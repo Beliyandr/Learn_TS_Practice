@@ -2,8 +2,6 @@
 //* Основная цель - дать понять другим разработчикам , что все эти значения тесно связаны
 //* Используется всякий раз, когда у нас есть небольшой фиксированный набор значений, которые все тесно связаны и известны во время компиляции
 
-import { CsvFileReader } from "./CsvFileReader";
-
 // import fs from "fs";
 // const matches = fs
 //   .readFileSync("football.csv", {
@@ -14,16 +12,16 @@ import { CsvFileReader } from "./CsvFileReader";
 //     return row.split(",");
 //   });
 
+/****************************************************************************************************** */
+
+import { CsvFileReader } from "./CsvFileReader";
+import { MatchResult } from "./MatchResult";
+
 const reader = new CsvFileReader("football.csv");
 
 reader.read();
 
-// Enum - enumeration - перечисление
-enum MatchResult {
-  HomeWin = "H",
-  AwayWin = "A",
-  Draw = "D",
-}
+console.log(reader.data);
 
 let manUnitedWins = 0;
 
