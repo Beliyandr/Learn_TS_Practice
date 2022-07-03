@@ -1,10 +1,12 @@
+import { Sorter } from "./Sorter";
+
 class Node_ {
   next: Node_ | null = null;
 
   constructor(public data: number) {}
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter {
   head: Node_ | null = null;
 
   add(data: number): void {
