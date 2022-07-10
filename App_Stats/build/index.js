@@ -13,11 +13,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //     return row.split(",");
 //   });
 /****************************************************************************************************** */
-const CsvFileReader_1 = require("./CsvFileReader");
+const MatchRaeder_1 = require("./MatchRaeder");
 const MatchResult_1 = require("./MatchResult");
-const reader = new CsvFileReader_1.CsvFileReader("football.csv");
+const reader = new MatchRaeder_1.MatchRaeder("football.csv");
 reader.read();
-console.log(reader.data);
+// console.log(reader.data);
 let manUnitedWins = 0;
 for (let match of reader.data) {
     if (match[1] === "Man United" && match[5] === MatchResult_1.MatchResult.HomeWin) {
